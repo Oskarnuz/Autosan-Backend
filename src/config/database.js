@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const connect = () => {
-  const mongoUri = 'mongodb://localhost:27017/autosan'
+  const mongoUri = 'mongodb+srv://Autosan:Autosan@cluster0.y8usi3p.mongodb.net/autosan'
 
   mongoose.connect(mongoUri)
 
