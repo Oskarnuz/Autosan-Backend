@@ -1,17 +1,19 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const connect = () => {
-  const mongoUri = 'mongodb+srv://Autosan:Autosan@cluster0.y8usi3p.mongodb.net/autosan'
+  const mongoUri = process.env.MONGO_DB_URI;
 
-  mongoose.connect(mongoUri)
+  mongoose.connect(mongoUri);
 
-  mongoose.connection.once('open', () => {
-    console.log('Connection with mongo is ready')
-  })
+  mongoose.connection.once("open", () => {
+    console.log("Connection with mongoDB OK");
+  });
 
-  mongoose.connection.on('error', (error) => {
-    console.log('Not is possible the connection', error)
-  })
-}
+  mongoose.connection.on("error", (error) => {
+    console.log("Something went wring", error);
+  });
 
-module.exports = {connect}
+  return mongoose.connection;
+};
+
+module.exports = connect;
