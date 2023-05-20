@@ -163,9 +163,7 @@ module.exports = {
         expiresIn: 60 * 60 * 24,
       });
 
-      res
-        .status(200)
-        .json({ message: "Usuario ha iniciado sesión correctamente", data: { email, token } });
+      res.status(200).json({ message: "Usuario ha iniciado sesión correctamente", data: { email, token } });
     } catch (error) {
       res
         .status(400)

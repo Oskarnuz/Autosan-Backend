@@ -10,6 +10,12 @@ const vehicleSchema = new Schema(
     color: String,
     fuel: String,
     images: String,
+    orders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Order'
+      }
+    ]
   },
   {
     timestamps: true,

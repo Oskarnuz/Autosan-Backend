@@ -9,7 +9,13 @@ const customerSchema = new Schema(
     identificationCard: String,
     address: String,
     phone: String,
-    email: String
+    email: String,
+    vehicles: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Vehicle'
+      }
+    ]
   },
   {
     timestamps: true,
