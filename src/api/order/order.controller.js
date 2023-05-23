@@ -1,7 +1,7 @@
 const Order = require('./order.model')
 
 module.exports = {
-  //POST
+  
   async createOrder(req, res) {
     try {
       const data = req.body
@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 
-  // GET
+  
   async listOrders(req, res) {
     try {
       const orders = await Order.find()
@@ -27,7 +27,7 @@ module.exports = {
     }
   },
 
-  // GET:id
+  
   async showOrder(req, res) {
     try {
       const { orderId } = req.params
@@ -40,7 +40,7 @@ module.exports = {
     }
   },
 
-  // PUT:id
+  
   async updateOrder(req, res) {
     try {
       const { orderId } = req.params
@@ -55,7 +55,7 @@ module.exports = {
     }
   },
 
-  // DELETE:id
+  
   async deleteOrder(req, res) {
     try {
       const { orderId } = req.params
@@ -68,7 +68,5 @@ module.exports = {
       res.status(400).json({ message: 'Order not Deleted', data: error})
     }
   },
-
-
 
 }

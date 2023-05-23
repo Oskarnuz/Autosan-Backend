@@ -1,7 +1,7 @@
 const Customer = require('./customer.model')
 
 module.exports = {
-  //POST
+  
   async createCustomer(req, res) {
     try {
       const data = req.body
@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 
-  // GET
+  
   async listCustomers(req, res) {
     try {
       const customers = await Customer.find()
@@ -27,7 +27,7 @@ module.exports = {
     }
   },
 
-  // GET:id
+  
   async showCustomer(req, res) {
     try {
       const { customerId } = req.params
@@ -40,7 +40,7 @@ module.exports = {
     }
   },
 
-  // PUT:id
+  
   async updateCustomer(req, res) {
     try {
       const { customerId } = req.params
@@ -55,7 +55,7 @@ module.exports = {
     }
   },
 
-  // DELETE:id
+  
   async deleteCustomer(req, res) {
     try {
       const { customerId } = req.params

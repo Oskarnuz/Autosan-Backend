@@ -1,7 +1,7 @@
 const Vehicle = require('./vehicle.model')
 
 module.exports = {
-  //POST
+  
   async createVehicle(req, res) {
     try {
       const data = req.body
@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 
-  // GET
+  
   async listVehicles(req, res) {
     try {
       const vehicles = await Vehicle.find()
@@ -27,7 +27,7 @@ module.exports = {
     }
   },
 
-  // GET:id
+  
   async showVehicle(req, res) {
     try {
       const { vehicleId } = req.params
@@ -40,7 +40,7 @@ module.exports = {
     }
   },
 
-  // PUT:id
+  
   async updateVehicle(req, res) {
     try {
       const { vehicleId } = req.params
@@ -55,7 +55,7 @@ module.exports = {
     }
   },
 
-  // DELETE:id
+  
   async deleteVehicle(req, res) {
     try {
       const { vehicleId } = req.params
