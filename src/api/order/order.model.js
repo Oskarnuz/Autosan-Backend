@@ -2,6 +2,17 @@ const { Schema, model } = require('mongoose')
 
 const orderSchema = new Schema(
   {
+    numeroOrden: Number,
+    fecha: Date,
+    asesor: String,
+    kilometraje: String,
+    cliente: String,
+    celular: String,
+    email: String,
+    marca: String,
+    modelo: String,
+    placa: String,
+    color: String,
     radio: Boolean,
     encendedor: Boolean,
     pito: Boolean,

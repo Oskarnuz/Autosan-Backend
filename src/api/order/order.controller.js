@@ -8,7 +8,7 @@ module.exports = {
 
       const order = await Order.create({ ...data})
 
-      res.status(201).json({ message: 'Order created', data: order})
+      res.status(200).json({ message: 'Order created', data: order})
 
     } catch (error) {
       res.status(400).json({ message: 'Order could not created', data: error.message })
